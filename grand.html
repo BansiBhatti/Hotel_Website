@@ -1,0 +1,107 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+
+
+<body>
+    <div style="display: flex;justify-content: center;">
+        <div class="main-div">
+
+            <div class="menu-btn" id="menuBtn" onclick="toggleMenu()">☰</div>
+
+            <nav class="navbar" id="navbar">
+                <a href="HotelWebsite.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="accommodations.html">Accommodations</a>
+                <a href="grand.html" class="active">The Grand Penthouse</a>
+                <a href="promos.html">Promos</a>
+                <a href="press.html">Press</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <section class="penthouse-section" >
+
+                <!-- Title -->
+                <div class="penthouse-header" >
+                    <h1>The Grand<br>Penthouse</h1>
+
+                    <div class="main-image">
+                        <img src="images/room6.jpg" style="display: flex;justify-content: right;">
+                        <div class="caption">An inviting option that describes the room goes here.
+                            <br>Use a flattering photo, then describe away!
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Description -->
+                <p class="penthouse-text" >
+                    Showcase the best your property has to offer by highlighting on your accommodations.
+                    Add meaningful photos, then describe the room’s best features.
+                </p>
+
+                <!-- Gallery -->
+                <div class="penthouse-gallery" style="display: flex;justify-content: center;">
+
+                    <div class="gallery-card">
+                        <img src="images/penthouse-dining.jpg">
+                        <div class="caption">An intriguing caption that describes the room goes here. Use a flattering
+                            photo, then describe away!</div>
+                    </div>
+
+                    <div class="gallery-card">
+                        <img src="images/penthouse-bath.jpg">
+                        <div class="caption">An intriguing caption that describes the room goes here. Use a flattering
+                            photo, then describe away!</div>
+                    </div>
+
+                </div>
+
+                <!-- Floor Plan -->
+                <div class="floor-plan">
+                    <div class="fp-box">
+                        <img src="images/floor-plan.jpg">
+                        <div class="caption">
+                           An intriguing caption that describes the room goes here. Use a flattering photo, then describe away! 
+                        </div>
+                    </div>
+                </div>
+
+
+            </section>
+        </div>
+    </div>
+
+
+
+
+
+    <script>
+        function toggleMenu() {
+            const navbar = document.getElementById("navbar");
+            const menuBtn = document.getElementById("menuBtn");
+
+            navbar.classList.toggle("show");
+
+            if (navbar.classList.contains("show")) {
+                menuBtn.innerHTML = "✖";
+            } else {
+                menuBtn.innerHTML = "☰";
+            }
+        }
+
+        document.querySelectorAll(".navbar a").forEach(link => {
+            link.addEventListener("click", () => {
+                document.getElementById("navbar").classList.remove("show");
+                document.getElementById("menuBtn").innerHTML = "☰ Menu";
+            });
+        });
+    </script>
+</body>
+
+</html>

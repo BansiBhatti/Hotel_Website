@@ -1,0 +1,124 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+
+
+<body class="pressbody">
+    <div style="display: flex;justify-content: center;">
+        <div class="main-div">
+
+            <div class="menu-btn" id="menuBtn" onclick="toggleMenu()">☰</div>
+
+            <nav class="navbar" id="navbar">
+                <a href="HotelWebsite.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="accommodations.html">Accommodations</a>
+                <a href="grand.html">The Grand Penthouse</a>
+                <a href="promos.html">Promos</a>
+                <a href="press.html" class="active">Press</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+
+            <section class="press-section">
+
+                <div class="press-overlay">
+                    <h2>In the Press</h2>
+
+                    <div class="press-grid">
+                        <div class="press-card">
+                            <span class="quote">“</span>
+                            <p>
+                                News write-ups offer a great way to let clients know about new products
+                                and services, events, awards, and more.
+                            </p>
+                            <h4>Traveler’s Post</h4>
+                        </div>
+
+                        <div class="press-card">
+                            <span class="quote">“</span>
+                            <p>
+                                News write-ups offer a great way to let clients know about new products
+                                and services, events, awards, and more.
+                            </p>
+                            <h4>Luxe Travels</h4>
+                        </div>
+
+                        <div class="press-card">
+                            <span class="quote">“</span>
+                            <p>
+                                News write-ups offer a great way to let clients know about new products
+                                and services, events, awards, and more.
+                            </p>
+                            <h4>City Journal</h4>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- LIGHT TESTIMONIAL PART -->
+            <section class="press-light">
+                <div class="press-grid light">
+
+                    <div class="press-card light-card">
+                        <span class="quote">“</span>
+                        <p>
+                            News write-ups offer a great way to let clients know about new products
+                            and services, events, awards, and more.
+                        </p>
+                        <h4>Escape Magazine</h4>
+                    </div>
+
+                    <div class="press-card light-card">
+                        <span class="quote">“</span>
+                        <p>
+                            News write-ups offer a great way to let clients know about new products
+                            and services, events, awards, and more.
+                        </p>
+                        <h4>Worldwide Explorer Journal</h4>
+                    </div>
+
+                    <div class="press-card light-card">
+                        <span class="quote">“</span>
+                        <p>
+                            News write-ups offer a great way to let clients know about new products
+                            and services, events, awards, and more.
+                        </p>
+                        <h4>Travel Weekly</h4>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+    </div>
+    <script>
+        function toggleMenu() {
+            const navbar = document.getElementById("navbar");
+            const menuBtn = document.getElementById("menuBtn");
+
+            navbar.classList.toggle("show");
+
+            if (navbar.classList.contains("show")) {
+                menuBtn.innerHTML = "✖";
+            } else {
+                menuBtn.innerHTML = "☰";
+            }
+        }
+
+        document.querySelectorAll(".navbar a").forEach(link => {
+            link.addEventListener("click", () => {
+                document.getElementById("navbar").classList.remove("show");
+                document.getElementById("menuBtn").innerHTML = "☰ Menu";
+            });
+        });
+    </script>
+</body>
+
+</html>

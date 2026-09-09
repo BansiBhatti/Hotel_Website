@@ -1,0 +1,91 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+
+
+<body>
+    <div style="display: flex;justify-content: center;">
+        <div class="main-div">
+
+            <div class="menu-btn" id="menuBtn" onclick="toggleMenu()">☰</div>
+
+            <nav class="navbar" id="navbar">
+                <a href="index.html" class="active">Home</a>
+                <a href="about.html">About</a>
+                <a href="accommodations.html">Accommodations</a>
+                <a href="grand.html">The Grand Penthouse</a>
+                <a href="promos.html">Promos</a>
+                <a href="press.html">Press</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <div>
+                <div class="hero1">
+                    <h1 class="grand-text">The Grand</h1>
+                    <h6>Learn More</h6>
+                </div>
+                <div class="hero2">
+                    <h3>Classic grandeur meets<br>mordrn elegance</h3>
+                    <div class="bed"  style="display: flex;justify-content: center;">
+                        <img src="images/bed.jpg" class="bedimg" />
+                    </div>
+                    <h5>IN THE HEART OF THE CITY</h5>
+                </div>
+
+            </div>
+
+            <section class="award-section">
+                <div class="award-container">
+
+                    <div class="award-box">
+                        <i class="fa-solid fa-trophy"></i>
+                        <p>2030 Hospitality<br>Excellence Awardee</p>
+                    </div>
+
+                    <div class="award-box">
+                        <i class="fa-solid fa-award"></i>
+                        <p>Travelers<br>Choice 2030</p>
+                    </div>
+
+                    <div class="award-box">
+                        <i class="fa-solid fa-suitcase-rolling"></i>
+                        <p>Ranked no. 2 in<br>Urban Journal's<br>Top City Hotels</p>
+                    </div>
+
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+
+    <script>
+        function toggleMenu() {
+            const navbar = document.getElementById("navbar");
+            const menuBtn = document.getElementById("menuBtn");
+
+            navbar.classList.toggle("show");
+
+            if (navbar.classList.contains("show")) {
+                menuBtn.innerHTML = "✖";
+            } else {
+                menuBtn.innerHTML = "☰";
+            }
+        }
+
+        document.querySelectorAll(".navbar a").forEach(link => {
+            link.addEventListener("click", () => {
+                document.getElementById("navbar").classList.remove("show");
+                document.getElementById("menuBtn").innerHTML = "☰ Menu";
+            });
+        });
+    </script>
+</body>
+
+</html>

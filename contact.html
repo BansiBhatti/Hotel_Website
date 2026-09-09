@@ -1,0 +1,86 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+
+
+<body>
+    <div style="display: flex;justify-content: center;">
+        <div class="main-div">
+
+            <div class="menu-btn" id="menuBtn" onclick="toggleMenu()">☰</div>
+
+            <nav class="navbar" id="navbar">
+                <a href="HotelWebsite.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="accommodations.html">Accommodations</a>
+                <a href="grand.html">The Grand Penthouse</a>
+                <a href="promos.html">Promos</a>
+                <a href="press.html">Press</a>
+                <a href="contact.html" class="active">Contact</a>
+            </nav>
+
+            <section class="footer-hero">
+                <div class="contact-overlay">
+                    <div class="footer-logo">
+                        <label>The Grand</label><br>
+                        <span>RESORT & SPA HOTEL</span>
+                </div>
+            </section>
+
+            <footer class="footer">
+                <div class="footer-grid">
+
+                    <div class="footer-box">
+                        <h4>Reservations Office</h4>
+                        <p>📍123 Anywhere St.<br>Any City, ST 12345</p>
+                        <p>📞 +123-456-7890</p>
+                        <p>✉️ hello@reallygreatsite.com</p>
+                    </div>
+
+                    <div class="footer-box">
+                        <h4>Office Hours</h4>
+                        <p>Monday to Friday<br>9:00 am to 6:00 pm</p>
+                        <p>Saturday<br>9:00 am to 12:00 noon</p>
+                    </div>
+
+                    <div class="footer-box">
+                        <h4>Get Social</h4>
+                        <p>Facebook<br>Instagram</p>
+                        <button class="footer-btn">Tag us in your photos!</button>
+                    </div>
+
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const navbar = document.getElementById("navbar");
+            const menuBtn = document.getElementById("menuBtn");
+
+            navbar.classList.toggle("show");
+
+            if (navbar.classList.contains("show")) {
+                menuBtn.innerHTML = "✖";
+            } else {
+                menuBtn.innerHTML = "☰";
+            }
+        }
+
+        document.querySelectorAll(".navbar a").forEach(link => {
+            link.addEventListener("click", () => {
+                document.getElementById("navbar").classList.remove("show");
+                document.getElementById("menuBtn").innerHTML = "☰ Menu";
+            });
+        });
+    </script>
+</body>
+
+</html>
